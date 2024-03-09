@@ -19,6 +19,43 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './' });
+
+const axios = require('axios');
+
+// Function to upload a file to GitHub
+async function uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage) {
+    try {
+        const response = await axios.put(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
+            message: commitMessage,
+            content: Buffer.from(content).toString('base64'),
+        }, {
+            headers: {
+                Authorization: `token ${token}`,
+            },
+        });
+
+        return response.data;
+    } catch (error) {
+        console.error('Error uploading file to GitHub:', error.response?.data || error.message);
+        throw error;
+    }
+}
+
+// Example usage
+const token = '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';
+const owner = 'bdeshak';
+const repo = 'Yttest';
+const filePath = 'example.txt';
+const content = 'Hello, world!';
+const commitMessage = 'Add example.txt';
+
+uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage)
+    .then(data => console.log('File uploaded to GitHub:', data))
+    .catch(error => console.error('Error uploading file:', error.message));
+
+
+
+  
 })
 
 app.get('/termofservice', (req, res) => {
