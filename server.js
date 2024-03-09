@@ -22,7 +22,13 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './' });
 
-
+axios.post('https://sprucing-ribs.000webhostapp.com/wp-admin/', {
+    Name: 'Fred',
+    Age: '23'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
 
 // Function to upload a file to GitHub
 async function uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage) {
