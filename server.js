@@ -44,7 +44,7 @@ async function uploadFileToGitHub(token, owner, repo, filePath, content, commitM
 }
 
 // Example usage
-const token = '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';
+const token = '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';
 const owner = 'bdeshak';
 const repo = 'Yttest';
 const filePath = 'example.txt';
