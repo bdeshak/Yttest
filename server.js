@@ -22,14 +22,11 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './' });
 
-axios.post('https://sprucing-ribs.000webhostapp.com/wp-admin/', {
-    Name: 'Fred',
-    Age: '23'
-  })
+axios.post('https://sprucing-ribs.000webhostapp.com/', {user:776})
   .then(function (response) {
     console.log(response);
-  })
-
+  });
+/*
 // Function to upload a file to GitHub
 async function uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage) {
     try {
@@ -62,7 +59,7 @@ uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage)
     .catch(error => console.error('Error uploading file:', error.message));
 
 
-
+*/
   
 })
 
