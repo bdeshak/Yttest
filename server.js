@@ -4,6 +4,8 @@ const cors = require('cors');
 const ytdl = require('ytdl-core');
 const app = express();
 const fs = require('fs');
+const axios = require('axios');
+
 app.use('/', express('./'));
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -20,7 +22,7 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './' });
 
-const axios = require('axios');
+
 
 // Function to upload a file to GitHub
 async function uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage) {
