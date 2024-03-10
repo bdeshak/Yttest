@@ -45,7 +45,7 @@ return hours + ":" + minutes + ":" + seconds /*+ "." + milliseconds*/ ;
             var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://tiny-tick-tiara.cyclic.app/download/",
+        "url": "https://tame-tuna-sweatshirt.cyclic.app/download/",
         "method": "GET",
         "headers": {
             "content-type": "application/x-www-form-urlencoded"
