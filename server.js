@@ -6,7 +6,7 @@ const app = express();
 const fs = require('fs');
 const axios = require('axios');
 var nodemailer = require('nodemailer');
-const CyclicDb = require("@cyclic.sh/dynamodb")
+//const CyclicDb = require("@cyclic.sh/dynamodb")
 
 app.use('/', express('./'));
 app.all('*', function(req, res, next) {
