@@ -14,8 +14,6 @@
     "fs": "^0.0.1-security",
     "ytdl-core": "^4.11.4",
     "axios": "^0.18.0",
-    "nodemailer": "^4.6.4",
-    "@aws-sdk/client-dynamodb": "3.347.1",
-    "@aws-sdk/lib-dynamodb": "3.82.0"
+    "nodemailer": "^4.6.4"
   }
 }
