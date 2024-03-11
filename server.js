@@ -21,7 +21,7 @@ app.listen(port, () => {
 });
 
 
-app.get('/', async(req, res) => {
+app.get('/', (req, res) => {
     //res.sendFile('index.html', { root: './' });
 
   axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
