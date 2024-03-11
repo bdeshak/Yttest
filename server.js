@@ -23,22 +23,25 @@ app.listen(port, () => {
 
 app.get('/', async(req, res) => {
     //res.sendFile('index.html', { root: './' });
-const db = CyclicDb("tame-tuna-sweatshirtCyclicDB");
 
-const animals = db.collection("animals");
-// create an item in collection with key "leo"
-let leo = await animals.set("leo", {
-type: "cat",
-color: "orange"
-})
+  axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
+  .then(function (response) {
+    console.log(8888);
+    console.log(response);
+  });
 
-// get an item at key "leo" from collection animals
-let item = await animals.get("leo")
-console.log(item)
-  
 
   
-})
+});
+
+
+app.get('/hello', async(req, res) => {
+    //res.sendFile('index.html', { root: './' });
+
+res.send(4444);
+});
+
+
 
 app.get('/termofservice', (req, res) => {
     res.sendFile('termofservice.html', { root: './' });
