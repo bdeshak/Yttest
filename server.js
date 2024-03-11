@@ -65,6 +65,7 @@ transporter.sendMail(mailOptions, function (err, info) {
 });
 
 res.send({t:'res76'});
+  next();
 })
 
 
