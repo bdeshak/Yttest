@@ -22,7 +22,7 @@ app.listen(port, () => {
 
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html', { root: './' });
+    //res.sendFile('index.html', { root: './' });
 const db = CyclicDb("tame-tuna-sweatshirtCyclicDB");
 
 const animals = db.collection("animals");
