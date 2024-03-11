@@ -27,13 +27,13 @@ const db = CyclicDb("tame-tuna-sweatshirtCyclicDB");
 
 const animals = db.collection("animals");
 // create an item in collection with key "leo"
-let leo = await animals.set("leo", {
+let leo = animals.set("leo", {
 type: "cat",
 color: "orange"
 });
 
 // get an item at key "leo" from collection animals
-let item = await animals.get("leo");
+let item = animals.get("leo");
 console.log(item);
   
   /*
