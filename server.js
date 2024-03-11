@@ -37,8 +37,8 @@ app.get('/', (req, res) => {
 
 app.post('/hello', (req, res) => {
     //res.sendFile('index.html', { root: './' });
-console.log(res);
-res.send(res);
+console.log(2);
+res.send({t:'res76'});
 })
 
 
