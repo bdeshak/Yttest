@@ -21,20 +21,20 @@ app.listen(port, () => {
 });
 
 
-app.get('/', (req, res) => {
+app.get('/', async(req, res) => {
     //res.sendFile('index.html', { root: './' });
 const db = CyclicDb("tame-tuna-sweatshirtCyclicDB");
 
 const animals = db.collection("animals");
 // create an item in collection with key "leo"
-let leo = animals.set("leo", {
+let leo = await animals.set("leo", {
 type: "cat",
 color: "orange"
-});
+})
 
 // get an item at key "leo" from collection animals
-let item = animals.get("leo");
-console.log(item);
+let item = await animals.get("leo")
+console.log(item)
   
 
   
