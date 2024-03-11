@@ -35,7 +35,7 @@ app.get('/', async(req, res) => {
 });
 
 
-app.get('/hello', async(req, res) => {
+app.post('/hello', async(req, res) => {
     //res.sendFile('index.html', { root: './' });
 
 res.send(4444);
