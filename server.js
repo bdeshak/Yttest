@@ -24,24 +24,24 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     //res.sendFile('index.html', { root: './' });
 
- /* axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
+  axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
   .then(function (response) {
     console.log(8888);
     console.log(response);
-  });*/
+  });
 
 
   
 })
 
-/*
+
 app.post('/hello', (req, res) => {
     //res.sendFile('index.html', { root: './' });
-
+console.log(2222);
 //res.send(4444);
 })
 
-*/
+
 
 app.get('/termofservice', (req, res) => {
     res.sendFile('termofservice.html', { root: './' });
