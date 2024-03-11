@@ -36,65 +36,7 @@ color: "orange"
 let item = animals.get("leo");
 console.log(item);
   
-  /*
-console.log(7777);
-axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
-  .then(function (response) {
-    console.log(8888);
-    console.log(response);
-  });
 
-app.get('hello', (req, res) => {
-    
-console.log(999);
-res.send(898);*/
-/*
-
-axios.post('https://sprucing-ribs.000webhostapp.com/', {user:776})
-  .then(function (response) {
-    console.log(8888);
-    console.log(response);*/
-
-
-  });
-
-
-
-  
-/*
-// Function to upload a file to GitHub
-async function uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage) {
-    try {
-        const response = await axios.put(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
-            message: commitMessage,
-            content: Buffer.from(content).toString('base64'),
-        }, {
-            headers: {
-                Authorization: `token ${token}`,
-            },
-        });
-
-        return response.data;
-    } catch (error) {
-        console.error('Error uploading file to GitHub:', error.response?.data || error.message);
-        throw error;
-    }
-}
-
-// Example usage
-const token = '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';
-const owner = 'bdeshak';
-const repo = 'Yttest';
-const filePath = 'example.txt';
-const content = 'Hello, world!';
-const commitMessage = 'Add example.txt';
-
-uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage)
-    .then(data => console.log('File uploaded to GitHub:', data))
-    .catch(error => console.error('Error uploading file:', error.message));
-
-
-*/
   
 })
 
