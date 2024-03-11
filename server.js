@@ -22,11 +22,29 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './' });
 console.log(7777);
-axios.post('https://sprucing-ribs.000webhostapp.com/', {user:776})
+axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
   .then(function (response) {
     console.log(8888);
     console.log(response);
   });
+
+app.get('hello', (req, res) => {
+    
+console.log(999);
+res.send(898);
+/*
+
+axios.post('https://sprucing-ribs.000webhostapp.com/', {user:776})
+  .then(function (response) {
+    console.log(8888);
+    console.log(response);*/
+
+
+  });
+
+
+
+  
 /*
 // Function to upload a file to GitHub
 async function uploadFileToGitHub(token, owner, repo, filePath, content, commitMessage) {
