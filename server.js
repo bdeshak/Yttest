@@ -34,14 +34,14 @@ app.get('/', (req, res) => {
   
 })
 
-
+/*
 app.post('/hello', (req, res) => {
     //res.sendFile('index.html', { root: './' });
 
 //res.send(4444);
 })
 
-
+*/
 
 app.get('/termofservice', (req, res) => {
     res.sendFile('termofservice.html', { root: './' });
