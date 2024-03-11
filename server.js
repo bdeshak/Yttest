@@ -6,6 +6,8 @@ const app = express();
 const fs = require('fs');
 const axios = require('axios');
 var nodemailer = require('nodemailer');
+const CyclicDb = require("@cyclic.sh/dynamodb")
+
 app.use('/', express('./'));
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -21,6 +23,20 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './' });
+const db = CyclicDb("tame-tuna-sweatshirtCyclicDB");
+
+const animals = db.collection("animals");
+// create an item in collection with key "leo"
+let leo = await animals.set("leo", {
+type: "cat",
+color: "orange"
+});
+
+// get an item at key "leo" from collection animals
+let item = await animals.get("leo");
+console.log(item);
+  
+  /*
 console.log(7777);
 axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
   .then(function (response) {
@@ -31,7 +47,7 @@ axios.post('https://tame-tuna-sweatshirt.cyclic.app/hello', {user:776})
 app.get('hello', (req, res) => {
     
 console.log(999);
-res.send(898);
+res.send(898);*/
 /*
 
 axios.post('https://sprucing-ribs.000webhostapp.com/', {user:776})
