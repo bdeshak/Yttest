@@ -21,7 +21,7 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './' });
-
+console.log(7777);
 axios.post('https://sprucing-ribs.000webhostapp.com/', {user:776})
   .then(function (response) {
     console.log(8888);
